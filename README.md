@@ -1,2 +1,5 @@
-# quiz-frontend-design
-A minimalistic and cool quiz webapp design (frontend) i created because i don't like my school's quiz app lol
+# Quiz Design
+A simple and cool quiz design i made in HTML/CSS/JS with these libraries:
+ - [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/)
+
+Licensed under GNU GPLv3 LICENSE
