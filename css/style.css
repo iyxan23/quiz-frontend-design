@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.child {
+    position: absolute;
+    top: 50%;
+}
