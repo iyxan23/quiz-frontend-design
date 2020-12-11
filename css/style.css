@@ -23,12 +23,14 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .child {
     display: flex;
     
+    width: 50vw;
+    
     flex-direction: column;
 }
 
 .options {
-    margin-top: 75px;
-    height: 20vh;
+    margin-top: 25px;
+    height: auto;
     display: flex;
     font-size: 15px;
     
@@ -38,6 +40,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 .option {
     transform: translateZ(20px);
+    
+    cursor: pointer;
     
     color: white;
     padding: 1vh;
@@ -61,9 +65,10 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 .question {
-    font-size: 30px;
-    line-height: 75px;
-    text-align: center;
+    width: 100%;
+    
+    font-size: 100%;
+    text-align: left;
 }
 
 .number-box {
@@ -78,4 +83,25 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     
     font-size: 50px;
     outline: 2px solid #FFFFFF;
+    
+    cursor: pointer;
+    
+    transition: 0.3s ease;
+    transition-property: all;
+    transition-property: color, background;
+}
+
+.number-box:hover {
+    background-color: white;
+    color: #171717;
+}
+
+.bottom-stuff {
+    display: flex;
+    
+    justify-content: flex-end;
+}
+
+.question-navigation a {
+    cursor: pointer;
 }
