@@ -30,16 +30,18 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 .options {
     margin-top: 25px;
-    height: auto;
+    height: 0px;
     display: flex;
     font-size: 15px;
+    
+    /* display: none; */
     
     flex-direction: column;
     justify-content: space-around;
 }
 
 .option {
-    transform: translateZ(20px);
+    /* transform: translateZ(20px); */
     
     cursor: pointer;
     
