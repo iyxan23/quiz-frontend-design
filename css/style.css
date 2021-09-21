@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+}
 
 body {
     background-color: #171717;
@@ -6,7 +9,7 @@ body {
     
     user-select: none;
     
-    font-family: 'Source Code Pro', monospace;
+    font-family: "JetBrains Mono", monospace;
 }
 
 html, body {margin: 0; height: 100%; overflow: hidden}
@@ -30,7 +33,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 .options {
     margin-top: 25px;
-    height: 0px;
     display: flex;
     font-size: 15px;
     
@@ -55,11 +57,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     transition: 0.3s ease;
     transition-property: all;
     transition-property: color, background;
-}
-
-.option:hover {
-    background-color: #ffffff;
-    color: #171717;
 }
 
 .top-text {
