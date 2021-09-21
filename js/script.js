@@ -52,14 +52,16 @@ let options = document.getElementById("options");
 let children = options.children;
 
 for (let i = 0; i < children.length; i++) {
-    var element = children[i].children[0];
+    var element = children[i];
     console.log(element);
 
     element.addEventListener("mouseover", (e) => {
+        e.target.style.transform = "scale(1.02)";
         enable_option(e.target);
     });
 
     element.addEventListener("mouseout", (e) => {
+        e.target.style.transform = "scale(1)";
         if (selection != i) {
             disable_option(e.target);
         }
@@ -74,11 +76,11 @@ for (let i = 0; i < children.length; i++) {
         }
 
         if (selection != -1) {
-            disable_option(children[selection].children[0]);
+            disable_option(children[selection]);
         }
 
         selection = i;
-        enable_option(children[selection].children[0]);
+        enable_option(children[selection]);
     });
 }
 

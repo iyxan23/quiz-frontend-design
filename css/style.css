@@ -6,9 +6,9 @@
 body {
     background-color: #171717;
     color: #FFFFFF;
-    
+
     user-select: none;
-    
+
     font-family: "JetBrains Mono", monospace;
 }
 
@@ -17,7 +17,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .container {
     width: 100%;
     height: 100%;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,9 +25,9 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 .child {
     display: flex;
-    
+
     width: 50vw;
-    
+
     flex-direction: column;
 }
 
@@ -35,28 +35,28 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     margin-top: 25px;
     display: flex;
     font-size: 15px;
-    
+
     /* display: none; */
-    
+
     flex-direction: column;
     justify-content: space-around;
 }
 
 .option {
     /* transform: translateZ(20px); */
-    
+
     cursor: pointer;
-    
+    transform: scale(1);
+
     color: white;
     padding: 1vh;
     margin-top: 10px;
     margin-bottom: 10px;
-    
+
     /* background-color: rgba(255, 255, 255, 1); */
     outline: 2px solid white;
     transition: 0.3s ease;
-    transition-property: all;
-    transition-property: color, background;
+    transition-property: color, background, transform;
 }
 
 .top-text {
@@ -65,7 +65,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 .question {
     width: 100%;
-    
+
     font-size: 100%;
     text-align: left;
 }
@@ -73,34 +73,23 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .number-box {
     width: 75px;
     height: 75px;
-    
+
     margin-right: 50px;
-    
+
     text-align: center;
     vertical-align: middle;
     line-height: 75px;
-    
+
     font-size: 50px;
     outline: 2px solid #FFFFFF;
-    
+
     cursor: pointer;
-    
+
     transition: 0.3s ease;
-    transition-property: all;
     transition-property: color, background;
 }
 
 .number-box:hover {
     background-color: white;
     color: #171717;
-}
-
-.bottom-stuff {
-    display: flex;
-    
-    justify-content: flex-end;
-}
-
-.question-navigation a {
-    cursor: pointer;
 }
