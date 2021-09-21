@@ -93,3 +93,57 @@ function disable_option(option) {
     option.style.color = "#FFFFFF";
     option.style.backgroundColor = "#171717";
 }
+
+// previous button onclick
+var previous_button = document.querySelector("div.question-container > div > div.question-navigator > div.nav-previous");
+var next_button = document.querySelector("div.question-container > div > div.question-navigator > div.nav-next");
+
+var main_question = document.querySelector("div.question-container");
+var previous_question = document.querySelector("div.previous-question-container");
+var next_question = document.querySelector("div.next-question-container");
+
+previous_button.onclick = () => {
+    // main_question.style.transform = "scale(1)";
+}
+
+next_button.addEventListener("click", () => {
+    // shrink the main question
+    main_question.vanillaTilt.destroy();
+    main_question.style.transform = "scale(.65)";
+
+    setTimeout(() => {
+        main_question.style.position = "absolute";
+        main_question.style.left = "-35vw";
+
+        next_question.style.position = "relative";
+        next_question.style.right = "0";
+
+        previous_question.style.transform = "scale(.65) translateX(-70vw)"
+
+        setTimeout(() => {
+            main_question.classList.add("notransition");
+            next_question.classList.add("notransition");
+            previous_question.classList.add("notransition");
+
+            setTimeout(() => {
+                main_question.style.position = "relative";
+                main_question.style.left = "0";
+    
+                next_question.style.position = "absolute";
+                next_question.style.right = "-35vw";
+
+                previous_question.style.transform = "scale(.65)"
+    
+                setTimeout(() => {
+                    main_question.classList.remove("notransition");
+                    next_question.classList.remove("notransition");
+                    previous_question.classList.remove("notransition");
+    
+                    main_question.style.transform = "scale(1)";
+    
+                    VanillaTilt.init(main_question);
+                }, 5);
+            }, 5);
+        }, 500);
+    }, 500);
+});
